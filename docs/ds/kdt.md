@@ -103,7 +103,7 @@ k-D Tree 具有二叉搜索树的形态，二叉搜索树上的每个结点都�
         D[x] = min(D[x], D[rc[x]]), U[x] = max(U[x], U[rc[x]]);
     }
     int build(int l, int r) {
-      if (l >= r) return 0;
+      if (l > r) return 0;
       int mid = (l + r) >> 1;
       double avx = 0, avy = 0, vax = 0, vay = 0;  // average variance
       for (int i = l; i <= r; i++) avx += s[i].x, avy += s[i].y;
